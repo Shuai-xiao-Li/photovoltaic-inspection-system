@@ -1,0 +1,72 @@
+# =========================
+# System files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+.history/
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+dist/
+build/
+
+# =========================
+# C / STM32 / Keil
+# =========================
+Objects/
+Listings/
+*.uvoptx
+*.uvguix.*
+*.bak
+*.dep
+*.crf
+*.d
+*.o
+*.axf
+*.hex
+*.map
+*.lst
+
+# =========================
+# CMake / build
+# =========================
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Large model files
+# =========================
+*.pt
+*.pth
+*.onnx
+*.engine
+*.weights
+
+# =========================
+# Video files
+# 建议大视频不要直接上传GitHub
+# =========================
+*.mp4
+*.avi
+*.mov
+*.mkv
