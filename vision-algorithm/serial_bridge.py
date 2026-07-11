@@ -698,3 +698,4 @@ class SmartRoverController:
             return False
 
         return False
+
