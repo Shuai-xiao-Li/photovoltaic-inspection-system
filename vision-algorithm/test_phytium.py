@@ -256,3 +256,4 @@ if __name__ == "__main__":
     if args.test in ('state','all'): test_state_machine()
     if args.test in ('serial','all'): test_serial()
     if args.test in ('full','all'): test_full()
+
