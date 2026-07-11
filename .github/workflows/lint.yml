@@ -72,3 +72,4 @@ jobs:
           echo "$H_FILES"
           echo ""
           echo "✅ STM32 固件源文件检查通过 (STM32 firmware source check passed)"
+
