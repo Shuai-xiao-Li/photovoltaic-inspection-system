@@ -752,3 +752,4 @@ class SolarPanelTracker:
         """重置跟踪状态"""
         self._prev_bbox = None
         self._lost_count = 0
+
