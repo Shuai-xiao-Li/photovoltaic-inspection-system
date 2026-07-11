@@ -69,3 +69,4 @@
     python3 benchmark.py --stress 5
     ```
     运行 5 分钟的满载压力推理测试，并实时打印当前 CPU 的工作温度。
+
