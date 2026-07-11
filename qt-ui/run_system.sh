@@ -83,3 +83,4 @@ fi
 
 # 启动 UI (前台运行，阻塞等待其关闭。在此期间 Ctrl+C 会被 trap 捕获，触发 cleanup)
 ./PhytiumCarUI
+
