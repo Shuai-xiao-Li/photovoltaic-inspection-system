@@ -25,3 +25,4 @@ del *.htm /s
 del *.sct /s
 del *.map /s
 exit
+
