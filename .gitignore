@@ -1,72 +1,49 @@
-# =========================
-# System files
-# =========================
-.DS_Store
-Thumbs.db
-
-# =========================
-# VS Code
-# =========================
-.vscode/
-.history/
-
-# =========================
-# Python
-# =========================
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.venv/
-venv/
-env/
-dist/
-build/
-
-# =========================
-# C / STM32 / Keil
-# =========================
+# Keil MDK build output & temp files
+OBJ/
 Objects/
 Listings/
-*.uvoptx
-*.uvguix.*
-*.bak
-*.dep
-*.crf
-*.d
 *.o
+*.d
+*.crf
 *.axf
 *.hex
 *.map
 *.lst
+*.dep
+*.build_log.htm
+*.htm
+*.sct
+*.bak
 
-# =========================
-# CMake / build
-# =========================
-cmake-build-*/
-CMakeFiles/
-CMakeCache.txt
-Makefile
+# Keil MDK user settings/logs
+*.uvoptx
+*.uvguix.*
+JLinkLog.txt
 
-# =========================
-# Logs
-# =========================
-*.log
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+venv/
 
-# =========================
-# Large model files
-# =========================
-*.pt
+# Large ML models
 *.pth
-*.onnx
-*.engine
-*.weights
+fp32.onnx
+!solar_panel_int8.onnx
 
-# =========================
-# Video files
-# 建议大视频不要直接上传GitHub
-# =========================
-*.mp4
-*.avi
-*.mov
-*.mkv
+# Qt/QMake build artifacts
+*.pro.user
+*.pro.user.*
+.qmake.stash
+qrc_*.cpp
+moc_*.cpp
+build-*
+*.obj
+ui_*.h
+
+# OS files
+.DS_Store
+Thumbs.db

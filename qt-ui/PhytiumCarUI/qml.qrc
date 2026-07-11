@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>qml/style/qmldir</file>
+        <file>qml/style/Theme.qml</file>
+        <file>qml/components/GlassCard.qml</file>
+        <file>qml/components/SpeedGauge.qml</file>
+        <file>qml/components/BatteryIndicator.qml</file>
+        <file>qml/components/TemperatureDisplay.qml</file>
+        <file>qml/components/PositionDisplay.qml</file>
+        <file>qml/components/StatusBar.qml</file>
+        <file>qml/components/PanelListCard.qml</file>
+        <file>qml/components/PanelDetailModal.qml</file>
+        <file>qml/components/DetectionPanel.qml</file>
+        <file>qml/components/TaskProgressCard.qml</file>
+        <file>qml/components/LogConsole.qml</file>
+        <file>qml/components/SystemStatusCard.qml</file>
+    </qresource>
+</RCC>

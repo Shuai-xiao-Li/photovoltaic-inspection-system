@@ -1,0 +1,74 @@
+name: CI Lint 代码检查
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # --------------------------------------------------
+  # Python 代码风格检查 (Python Lint with flake8)
+  # --------------------------------------------------
+  python-lint:
+    name: Python Lint (flake8)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出代码 (Checkout repository)
+        uses: actions/checkout@v4
+
+      - name: 配置 Python 环境 (Set up Python 3.9)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: 安装 flake8 (Install flake8)
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8
+
+      - name: 运行 flake8 检查 (Run flake8 on vision-algorithm/)
+        run: |
+          echo "==== Python 代码风格检查 (Python Lint) ===="
+          flake8 vision-algorithm/ \
+            --max-line-length=120 \
+            --count \
+            --show-source \
+            --statistics
+
+  # --------------------------------------------------
+  # C 源文件检查 (C Source File Validation)
+  # --------------------------------------------------
+  c-check:
+    name: C Source Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出代码 (Checkout repository)
+        uses: actions/checkout@v4
+
+      - name: 检查 C/H 文件是否存在 (Verify .c and .h files exist)
+        run: |
+          echo "==== STM32 固件源文件检查 (STM32 Firmware Source Check) ===="
+
+          C_FILES=$(find stm32-chassis/ -name '*.c' 2>/dev/null | head -20)
+          H_FILES=$(find stm32-chassis/ -name '*.h' 2>/dev/null | head -20)
+
+          if [ -z "$C_FILES" ]; then
+            echo "❌ 错误: 未找到 .c 源文件 (No .c source files found in stm32-chassis/)"
+            exit 1
+          fi
+
+          if [ -z "$H_FILES" ]; then
+            echo "❌ 错误: 未找到 .h 头文件 (No .h header files found in stm32-chassis/)"
+            exit 1
+          fi
+
+          echo "✅ 找到以下 .c 文件 (Found .c files):"
+          echo "$C_FILES"
+          echo ""
+          echo "✅ 找到以下 .h 文件 (Found .h files):"
+          echo "$H_FILES"
+          echo ""
+          echo "✅ STM32 固件源文件检查通过 (STM32 firmware source check passed)"
