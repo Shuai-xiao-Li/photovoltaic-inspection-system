@@ -20,3 +20,4 @@
 （如果您希望飞腾派开机自动运行，可以考虑将 `/home/user/Desktop/PhytiumProject/6-15-16-30-飞腾派脱机调试优化版/start_offline.sh` 加入到 Linux 的 `rc.local` 或者 systemd 启动服务中。）
 
 ### 祝测试顺利！
+
