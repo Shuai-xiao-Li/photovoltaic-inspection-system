@@ -26,3 +26,4 @@
 - `realtime_detector_accel.py` - Main execution loop and state machine
 - `serial_bridge.py` - Serial communication bridge to STM32
 - `test_phytium.py` - Testing tool
+
