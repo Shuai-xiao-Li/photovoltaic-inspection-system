@@ -139,3 +139,4 @@ KEY1：PE3
    - 厂商示例 PWMA/PWMB 使用 PB1/PB0；本工程 LCD 占用 PB0，因此电机 PWM 必须接 PA6/PA7。
    - 厂商示例 ADC 使用 PA6；本工程 PA6 用作 PWM，因此 D153B ADC 必须接 PA5。
    - 厂商示例 E1A/E1B 使用 PB6/PB7；精英板该处接了 24C02，因此左编码器必须接 PC6/PC7。
+
