@@ -14,10 +14,10 @@ The robot consists of a visual sensor, an onboard Phytium Pi computer running in
 
 ```mermaid
 graph TD
-    Camera[Camera] -->|Image| PhytiumPi[Phytium Pi (Vision Algorithm)]
-    PhytiumPi -->|UART/Serial| STM32[STM32 Chassis Firmware]
+    Camera[Camera] -->|Image| PhytiumPi["Phytium Pi (Vision Algorithm)"]
+    PhytiumPi -->|UART/Serial| STM32["STM32 Chassis Firmware"]
     STM32 --> Motors[Motors]
-    PhytiumPi <-->|Monitoring & Control| QtUI[Phytium Qt QML UI]
+    PhytiumPi <-->|Monitoring & Control| QtUI["Phytium Qt QML UI"]
 ```
 
 ---
