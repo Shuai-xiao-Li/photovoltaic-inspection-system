@@ -142,3 +142,4 @@ if __name__ == '__main__':
         stress_test(args.int8, duration_mins=args.stress)
     else:
         print("\n提示：若需运行10分钟稳定性测试，请添加参数：python benchmark.py --stress 10")
+
