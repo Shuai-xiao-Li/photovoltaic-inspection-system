@@ -14,10 +14,10 @@
 
 ```mermaid
 graph TD
-    Camera[Camera] -->|Image| PhytiumPi["Phytium Pi (Vision Algorithm)"]
-    PhytiumPi -->|UART/Serial| STM32["STM32 Chassis Firmware"]
-    STM32 --> Motors[Motors]
-    PhytiumPi <-->|Monitoring & Control| QtUI["Phytium Qt QML UI"]
+    Camera[摄像头] -->|图像数据| PhytiumPi["飞腾派 (视觉算法)"]
+    PhytiumPi -->|串口通信| STM32["STM32 底盘固件"]
+    STM32 --> Motors[电机执行机构]
+    PhytiumPi <-->|监控与控制| QtUI["飞腾派 Qt QML 界面"]
 ```
 
 ---
