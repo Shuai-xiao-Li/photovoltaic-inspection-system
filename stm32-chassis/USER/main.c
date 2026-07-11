@@ -93,3 +93,4 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
         Chassis_ControlLoop10ms();        /* 底盘10ms控制核心：编码器读取 + 安全检查 + PID + PWM输出 */
     }
 }
+
